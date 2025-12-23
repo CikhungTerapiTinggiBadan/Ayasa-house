@@ -1,15 +1,14 @@
-// app/page.js
 "use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import PromoHeader from './components/promo'; // <-- IMPORT PromoHeader yang terpisah
+import PromoHeader from './components/promo';
 import { db } from '@/firebase/config'; 
 import { doc, getDoc } from "firebase/firestore";
 
 const HEADER_BG = "bg-[#43534B]"; 
 const MAIN_BG = "bg-white"; 
 
-// --- Komponen Placeholder Card Konten (TETAP SAMA) ---
 const ContentCardPlaceholder = ({imageUrl}) => (
     <div className="bg-white rounded-lg p-3 shadow-md border-2 border-gray-400">
         <div className="bg-gray-200 h-40 flex items-center justify-center rounded-lg relative overflow-hidden text-gray-500 text-sm">
@@ -21,17 +20,12 @@ const ContentCardPlaceholder = ({imageUrl}) => (
     </div>
 );
 
-// --- Komponen HeroSlider (Disatukan di page.js) ---
-
-// Daftar Gambar Latar Belakang
-
 const HeroSlider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [backgrounds, setBackgrounds] = useState([]); // State untuk menyimpan gambar dari Firestore
+    const [backgrounds, setBackgrounds] = useState([]); 
     const [loading, setLoading] = useState(true);
     const sliderRef = useRef(null);
 
-    // Ambil data dari Firestore
     useEffect(() => {
         const fetchBackgrounds = async () => {
             try {
@@ -40,7 +34,6 @@ const HeroSlider = () => {
 
                 if (docSnap.exists()) {
                     const data = docSnap.data();
-                    // Mengambil bg1, bg2, bg3 dan memfilter jika ada yang kosong
                     const images = [data.bg1, data.bg2, data.bg3].filter(img => img && img !== "");
                     setBackgrounds(images);
                 }
@@ -64,7 +57,6 @@ const HeroSlider = () => {
         }
     };
 
-    // Fungsi untuk berpindah ke slide tertentu (dipanggil oleh indikator)
     const goToSlide = (index) => {
         setActiveIndex(index);
         if (sliderRef.current) {
@@ -104,21 +96,14 @@ const HeroSlider = () => {
             </div>
             
 
-            {/* Konten Utama (PromoHeader & Headline) Ditumpuk di atas gambar */}
-            <div className="absolute inset-0 z-10 flex flex-col justify-start">
-                
-                {/* 1. Header Promo yang DI-IMPORT */}
+            <div className="absolute inset-0 z-10 flex flex-col justify-start">      
                 <PromoHeader />
-                
-                {/* 2. Headline Utama di tengah slider */}
             </div>
             <div
               className="w-full h-full bg-cover bg-center z-10 absolute bottom-0 transform"
               style={{ backgroundImage: "url('/bawah.png')" }}
             />
             
-
-            {/* Indikator Titik (Dot Indicators) */}
             <div className="absolute bottom-4 left-0 right-0 z-10 flex justify-center space-x-2">
                 {backgrounds.map((_, index) => (
                     <button
@@ -136,16 +121,12 @@ const HeroSlider = () => {
     );
 };
 
-
-// --- Halaman Utama (Home) ---
 export default function Home() {
     return (
         <div className={`min-h-screen ${MAIN_BG}`}>
             
-            {/* 1. Hero Area: Slider Gambar + Header Promo (menggunakan HeroSlider) */}
             <HeroSlider />
             
-            {/* 2. AYASA HOUSE Section */}
             <section className={`py-12 px-4 ${MAIN_BG}`}>
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-3xl font-bold text-center text-black mb-2">
@@ -163,7 +144,6 @@ export default function Home() {
                 </div>
             </section>
             
-            {/* 3. KAMAR Section (Background Hijau Tua) */}
             <section className={`py-12 px-4 ${HEADER_BG}`}>
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-3xl font-bold text-center text-white mb-2">
@@ -179,7 +159,7 @@ export default function Home() {
                         <ContentCardPlaceholder imageUrl="/6.jpeg" />
                     </div>
 
-                    <div className="flex justify-center mt-10"> {/* Container untuk memposisikan tombol ke tengah */}
+                    <div className="flex justify-center mt-10"> 
                         <Link href="/accommodation#room" className="text-sm font-bold border-b-2 border-white pb-0.5 hover:text-blue-600 text-white hover:border-blue-600 transition">
                             SEE MORE
                         </Link>
@@ -187,7 +167,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* 4. DAPUR Section */}
             <section className={`py-12 px-4 ${MAIN_BG}`}>
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-3xl font-bold text-center text-black mb-2">
@@ -203,7 +182,7 @@ export default function Home() {
                         <ContentCardPlaceholder imageUrl="/2.jpeg" />
                     </div>
 
-                    <div className="flex justify-center mt-10"> {/* Container untuk memposisikan tombol ke tengah */}
+                    <div className="flex justify-center mt-10"> 
                         <Link href="/accommodation#other" className="text-sm font-bold border-b-2 border-black pb-0.5 hover:text-gray-600 text-black hover:border-gray-600 transition">
                             SEE MORE
                         </Link>

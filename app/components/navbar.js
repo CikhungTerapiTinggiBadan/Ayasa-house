@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from 'lucide-react'; 
 
-const HEADER_BG = "bg-[#293c2a]"; // Hijau tua
+const HEADER_BG = "bg-[#293c2a]"; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,6 @@ export default function Navbar() {
             <span className="text-[#c9b091] text-2xl font-bold">House</span>
           </Link>
           
-          {/* Menu Desktop */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
@@ -57,7 +56,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Hamburger Mobile */}
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -69,7 +67,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu Mobile */}
       {isOpen && (
         <div className="md:hidden bg-[#293c2a] border-t border-green-900">
           <div className="px-2 pt-2 pb-3 space-y-1">
@@ -100,10 +97,8 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Popup Contact Us (Modal) */}
       {isContOpen && (
         <>
-          {/* Overlay Click-to-Close */}
           <div className="fixed inset-0" onClick={() => setIsContOpen(false)} />
           
           <div className="absolute top-16 right-4 w-80 md:w-96 bg-white shadow-2xl rounded-md text-black z-[10000] border border-gray-200 p-6 flex flex-col transition-all">
@@ -129,7 +124,7 @@ export default function Navbar() {
                     <img
                       src={link.icon}
                       alt={link.alt}
-                      className="w-10 h-10 object-contain" // Ukuran ikon diperbaiki dari 29 ke 10
+                      className="w-10 h-10 object-contain" 
                     />
                   </a>
                 ))}

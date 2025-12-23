@@ -22,24 +22,21 @@ export default function RoutingMap({ start, end, label }) {
 
   useEffect(() => {
     async function getRoute() {
-      // Validasi awal: jangan jalankan jika koordinat belum ada atau [0,0]
       if (!start || !end || (start[0] === 0 && end[0] === 0)) return;
       
       try {
-        // ORS butuh format: lon,lat
         const startParam = `${start[1]},${start[0]}`;
         const endParam = `${end[1]},${end[0]}`;
         
         const res = await fetch(`/api/route-map?start=${start[1]},${start[0]}&end=${end[1]},${end[0]}`);        const data = await res.json();
         
         if (data.features && data.features.length > 0) {
-          // Balik koordinat dari [lon, lat] ke [lat, lon] untuk Leaflet
           const coords = data.features[0].geometry.coordinates.map(c => [c[1], c[0]]);
           setRoutePoints(coords);
           console.log(`Rute ke ${label} berhasil dimuat.`);
         } else {
           console.warn(`Rute tidak ditemukan untuk ${label}. Periksa apakah koordinat di jalan raya.`);
-          setRoutePoints([]); // Reset jika tidak ada rute
+          setRoutePoints([]);
         }
       } catch (err) {
         console.error("Gagal fetch rute:", err);

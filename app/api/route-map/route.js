@@ -7,7 +7,6 @@ export async function GET(request) {
 
   const apiKey = process.env.NEXT_PUBLIC_ORS_API_KEY;
 
-  // Logging untuk debugging di terminal (bukan browser console)
   console.log("API Request:", { start, end, hasKey: !!apiKey });
 
   if (!apiKey) {
@@ -18,7 +17,6 @@ export async function GET(request) {
     return NextResponse.json({ error: 'Missing coords' }, { status: 400 });
   }
 
-  // Gunakan template literal yang bersih tanpa spasi tambahan
   const url = `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${apiKey}&start=${start}&end=${end}`;
 
   try {

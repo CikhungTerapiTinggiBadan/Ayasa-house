@@ -27,7 +27,6 @@ export default function LocationsPage() {
           rockBurger: parse(data.the_rock_burger)
         };
         setLokasi(dataParsed);
-        // Default selection
         setSelectedNearby({ coords: dataParsed.piqali, label: "Piqali" });
         setSelectedPopular({ coords: dataParsed.terminal, label: "Terminal Concat" });
       }
@@ -41,7 +40,6 @@ export default function LocationsPage() {
     <div className="bg-white min-h-screen text-black">
       <div className="max-w-5xl mx-auto px-4 py-8">
         
-        {/* --- SECTION 1: MAIN LOCATION --- */}
         <section className="mb-16 border-2 border-gray-300 rounded-2xl p-6">
           <h2 className="text-2xl font-bold text-center mb-6">LOCATION</h2>
           <div className="aspect-video w-full rounded-xl overflow-hidden border">
@@ -55,7 +53,6 @@ export default function LocationsPage() {
           </div>
         </section>
 
-        {/* --- SECTION 2: NEARBY HOTSPOT --- */}
         <section className="mb-16 border-2 border-gray-300 rounded-2xl p-6">
           <h2 className="text-2xl font-bold text-center mb-6">NEARBY HOTSPOT</h2>
           <div className="h-[400px] rounded-xl overflow-hidden border mb-6">
@@ -69,11 +66,9 @@ export default function LocationsPage() {
                  <p className="text-xs text-gray-500">5 Mins / 1 KM</p>
                </div>
              </button>
-             {/* Tambahkan button nearby lainnya di sini */}
           </div>
         </section>
 
-        {/* --- SECTION 3: POPULAR HOTSPOT --- */}
         <section className="mb-16 border-2 border-gray-300 rounded-2xl p-6">
           <h2 className="text-2xl font-bold text-center mb-6">POPULAR HOTSPOT</h2>
           <div className="h-[400px] rounded-xl overflow-hidden border mb-6">
