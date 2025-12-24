@@ -21,5 +21,3 @@ yarn-error.log*
 *.key
 *.tsbuildinfo
 next-env.d.ts
-*.json
-firebase-adminsdk-*.json
