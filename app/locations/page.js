@@ -38,8 +38,15 @@ export default function LocationsPage() {
 
   return (
     <div className="bg-white min-h-screen text-black">
+        <div className="max-w-5xl mx-auto px-4 py-8">
+            <p className="text-xs text-gray-500 mb-2 ">
+                Home / <span className="font-semibold text-black">Location</span>
+            </p>
+
+            <h1 className="text-3xl font-bold text-black mb-5">Location</h1>
+        </div>
+
       <div className="max-w-5xl mx-auto px-4 py-8">
-        
         <section className="mb-16 border-2 border-gray-300 rounded-2xl p-6">
           <h2 className="text-2xl font-bold text-center mb-6">LOCATION</h2>
           <div className="aspect-video w-full rounded-xl overflow-hidden border">
