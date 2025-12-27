@@ -100,11 +100,10 @@ export default function AccommodationPage() {
                         text="UPSTAIRS BEDROOM EAST" 
                         imageUrl={photoData["ka1"]} 
                         features={[
-                            { text: "2 TWIN SIZE BED", icon: "/r1.png" },
-                            { text: "AIR CONDITIONER", icon: "/r2.png" },
-                            { text: "TABLE", icon: "/r2.png" },
-                            { text: "WIFI", icon: "/r2.png" },
-                            { text: "WATER BOTTLE", icon: "/r2.png" }
+                            { text: "2 TWIN SIZE BED", icon: "/l5.png" },
+                            { text: "AIR CONDITIONER", icon: "/l3.png" },
+                            { text: "TABLE", icon: "/l1.png" },
+                            { text: "WIFI", icon: "/b5.png" },
                         ]}
                     />
 
@@ -112,11 +111,10 @@ export default function AccommodationPage() {
                         text="UPSTAIRS BEDROOM WEST" 
                         imageUrl={photoData["ka2"]} 
                         features={[
-                            { text: "QUEEN SIZE BED", icon: "/r1.png" },
-                            { text: "AIR CONDITIONER", icon: "/r2.png" },
-                            { text: "TABLE", icon: "/r2.png" },
-                            { text: "WIFI", icon: "/r2.png" },
-                            { text: "WATER BOTTLE", icon: "/r2.png" }
+                            { text: "QUEEN SIZE BED", icon: "/l4.png" },
+                            { text: "AIR CONDITIONER", icon: "/l3.png" },
+                            { text: "TABLE", icon: "/l1.png" },
+                            { text: "WIFI", icon: "/b5.png" },
                         ]}
                     />
                     
@@ -126,12 +124,11 @@ export default function AccommodationPage() {
                                 text="DOWNSTAIRS BEDROOM" 
                                 imageUrl={photoData["kb"]}
                                 features={[
-                                    { text: "QUEEN SIZE BED", icon: "/r1.png" },
-                                    { text: "INDOOR BATHROOM", icon: "/r1.png" },
-                                    { text: "AIR CONDITIONER", icon: "/r2.png" },
-                                    { text: "TABLE", icon: "/r2.png" },
-                                    { text: "WIFI", icon: "/r2.png" },
-                                    { text: "WATER BOTTLE", icon: "/r2.png" }
+                                    { text: "QUEEN SIZE BED", icon: "/l4.png" },
+                                    { text: "INDOOR BATHROOM", icon: "/l2.png" },
+                                    { text: "AIR CONDITIONER", icon: "/l3.png" },
+                                    { text: "TABLE", icon: "/l1.png" },
+                                    { text: "WIFI", icon: "/b5.png" },
                                 ]}
                             />
                         </div>
@@ -192,12 +189,11 @@ export default function AccommodationPage() {
                         <div className="flex flex-col">
                             <InfoBox text="2 CAR PARKING" imageUrl="/b1.png" />
                             <InfoBox text="NO BREAKFAST INCLUDED" imageUrl="/b2.png"  />
-                            <InfoBox text="DRINKING WATER" imageUrl="/b3.png"  />
                             <InfoBox text="CLEAN TOWEL" imageUrl="/b4.png"  />
-                            <InfoBox text="WIFI" imageUrl="/b4.png"  />
-                            <InfoBox text="IRON" imageUrl="/b4.png"  />
-                            <InfoBox text="SPARE ROOM FOR DRIVER" imageUrl="/b4.png"  />
-                            <InfoBox text="FREE EARLY CHECK IN IF POSSIBLE" imageUrl="/b4.png"  />
+                            <InfoBox text="WIFI" imageUrl="/b5.png"  />
+                            <InfoBox text="IRON" imageUrl="/b6.png"  />
+                            <InfoBox text="SPARE ROOM FOR DRIVER" imageUrl="/b7.png"  />
+                            <InfoBox text="FREE EARLY CHECK IN IF POSSIBLE" imageUrl="/b8.png"  />
                         </div>
                     </div>
                 </div>

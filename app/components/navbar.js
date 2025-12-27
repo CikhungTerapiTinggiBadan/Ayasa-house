@@ -18,9 +18,9 @@ export default function Navbar() {
   ];
 
   const socialLinks = [
-    { href: 'https://whatsapp.com', alt: 'WhatsApp', icon: '/facebook-fill-svgrepo-com.svg' },
-    { href: 'https://instagram.com', alt: 'Instagram', icon: '/instagram-fill-svgrepo-com.svg' },
-    { href: 'https://airbnb.com', alt: 'AirBnb', icon: '/instagram-fill-svgrepo-com.svg' },
+    { href: 'https://whatsapp.com/082249906357', alt: 'WhatsApp', icon: '/wa.png' },
+    { href: 'https://instagram.com', alt: 'Instagram', icon: '/ig.png' },
+    { href: 'https://www.airbnb.ca/rooms/1573861391574619719?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget', alt: 'AirBnb', icon: '/bnb.png' },
   ];
 
   return (
