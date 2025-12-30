@@ -28,7 +28,8 @@ export default function RoutingMap({ start, end, label }) {
         const startParam = `${start[1]},${start[0]}`;
         const endParam = `${end[1]},${end[0]}`;
         
-        const res = await fetch(`/api/route-map?start=${start[1]},${start[0]}&end=${end[1]},${end[0]}`);        const data = await res.json();
+        const res = await fetch(`/api/route-map?start=${start[1]},${start[0]}&end=${end[1]},${end[0]}`);        
+        const data = await res.json();
         
         if (data.features && data.features.length > 0) {
           const coords = data.features[0].geometry.coordinates.map(c => [c[1], c[0]]);
