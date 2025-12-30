@@ -5,7 +5,10 @@ AYASA House adalah aplikasi web responsif yang berfungsi sebagai katalog digital
 ---
 
 ## 📑 Gambar
-
+![Dashboard Screenshot1](public/pic1.png)
+![Dashboard Screenshot2](public/pic2.png)
+![Dashboard Screenshot3](public/pic3.png)
+![Dashboard Screenshot4](public/pic4.png)
 
 ---
 
