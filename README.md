@@ -4,14 +4,8 @@ AYASA House adalah aplikasi web responsif yang berfungsi sebagai katalog digital
 
 ---
 
-## 📑 Daftar Isi
-- [Fitur Utama](#-fitur-utama)
-- [Struktur Halaman](#-struktur-halaman)
-- [Detail Akomodasi](#-detail-akomodasi)
-- [Lokasi & Aksesibilitas](#-lokasi--aksesibilitas)
-- [Aturan & Keuntungan](#-aturan--keuntungan)
-- [Tech Stack](#-tech-stack)
-- [Kontak & Reservasi](#-kontak--reservasi)
+## 📑 Gambar
+
 
 ---
 
